@@ -6,9 +6,13 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"start": "pnpm run build & pnpm run preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
+		"db:push": "pnpm prisma db push",
+		"db:migrate": "pnpm prisma migrate dev",
+		"db:update": "pnpm prisma migrate deploy",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
@@ -18,6 +22,7 @@
 		"@types/eslint": "^8.56.0",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
+		"autoprefixer": "^10.4.16",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
@@ -26,15 +31,23 @@
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"prettier-plugin-tailwindcss": "^0.5.9",
+		"prisma": "^5.11.0",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"svelte-preprocess": "^5.1.3",
+		"tailwindcss": "^3.3.6",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3"
 	},
 	"type": "module",
 	"dependencies": {
-		"@discord/embedded-app-sdk": "^1.0.0"
+		"@discord/embedded-app-sdk": "^1.0.0",
+		"@hyperbeam/web": "^0.0.35",
+		"@prisma/client": "5.11.0",
+		"clsx": "^2.1.0",
+		"lucide-svelte": "^0.359.0",
+		"tailwind-merge": "^2.2.2",
+		"tailwind-variants": "^0.2.1"
 	}
 }

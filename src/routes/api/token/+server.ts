@@ -5,7 +5,6 @@ import { json, type RequestHandler } from '@sveltejs/kit';
 export const POST: RequestHandler = async ({ request }) => {
 	const { code } = await request.json();
 
-	console.log({ code });
 	const response = await fetch('https://discord.com/api/oauth2/token', {
 		method: 'POST',
 		headers: {
